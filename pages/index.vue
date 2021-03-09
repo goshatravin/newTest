@@ -4,6 +4,7 @@
       <Logo />
       <h1 class="title">
         <p>{{doc.title}}</p>
+        <p>{{doc.subtitle}}</p>
         <nuxt-content :document='doc'/>
       </h1>
       <div class="links">
