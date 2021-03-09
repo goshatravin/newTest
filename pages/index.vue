@@ -3,7 +3,8 @@
     <div>
       <Logo />
       <h1 class="title">
-        Test
+        <p>{{doc.title}}</p>
+        <nuxt-content :document='doc'/>
       </h1>
       <div class="links">
         <a
@@ -28,7 +29,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ $content, params }) {
+    const doc = await $content(params.slug || 'index').fetch()
+    console.log(doc)
+    return { doc }
+  }
+}
 </script>
 
 <style>
