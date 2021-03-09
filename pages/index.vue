@@ -3,6 +3,7 @@
     <div>
       <Logo />
       <h1 class="title">
+        <p>qwe</p>
         <p>{{doc.title}}</p>
         <p>{{doc.subTitle}}</p>
         <nuxt-content :document='doc'/>
